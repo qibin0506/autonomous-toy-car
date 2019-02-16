@@ -34,3 +34,6 @@
  ### 实验训练结果
   1. 修改socket_ctrl.py将`trainMode`变量改为False
   2. 打开手机端，依次点击`连接`、`自动驾驶模式`，将小车放到跑道上测试结果
+
+### 其他
+  项目默认通过Arduino控制玩具车，但完全可以自定义硬件设置，直接通过Raspberry Pi控制车，可通过修改socket_ctrl.py文件的`control`函数自定义你的控制方式。
