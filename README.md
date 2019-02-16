@@ -18,13 +18,14 @@
   
 ### 数据采集
   1. 将socket_ctrl.py上传到Raspberry Pi
-  2. 在socket_ctrl.py同级目录下创建data/img目录
-  3. 下载apk目录下的手机端控制软件
-  4. Raspberry Pi连接同手机局域网下的wifi，查看IP，修改socket_ctrl.py的ip变量，打开手机控制软件填写对应的ip，端口固定为9999，其他随意填写并点击`设置参数`按钮
-  5. 修改socket_ctrl.py的`trainMode`变量为True
-  6. Raspberry Pi运行`nohup python -o socket_ctrl.py &`打开服务
-  7. 手机端点击`连接`按钮，等待连接状态变为绿色，然后点击`训练模式`进入控制界面，控制小车在轨道内运行并自动采集数据
-  8. 查看data/img目录下采集数据的数量，如果达到要求（建议2000+图片）则可停止采集
+  2. 为保证正常运行，必须将`model.py`一并上传至Raspberry Pi
+  3. 在socket_ctrl.py同级目录下创建data/img目录
+  4. 下载apk目录下的手机端控制软件
+  5. Raspberry Pi连接同手机局域网下的wifi，查看IP，修改socket_ctrl.py的ip变量，打开手机控制软件填写对应的ip，端口固定为9999，其他随意填写并点击`设置参数`按钮
+  6. 修改socket_ctrl.py的`trainMode`变量为True
+  7. Raspberry Pi运行`nohup python -o socket_ctrl.py &`打开服务
+  8. 手机端点击`连接`按钮，等待连接状态变为绿色，然后点击`训练模式`进入控制界面，控制小车在轨道内运行并自动采集数据
+  9. 查看data/img目录下采集数据的数量，如果达到要求（建议2000+图片）则可停止采集
   
  ### 数据训练
   1. 将采集到的数据下载到本地
