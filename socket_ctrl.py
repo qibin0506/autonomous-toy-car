@@ -10,8 +10,9 @@ import numpy as np
 import model
 import tensorflow as tf
 
-trainMode = True
+trainMode = True # or False for autonomous model
 
+ip = "192.168.1.1"
 image_height = 240
 image_width = 320
 clipping_pixel = 80
@@ -181,6 +182,6 @@ CtrlThread().start()
 if trainMode:
     CaptureThread().start()
 
-h, p = "192.168.1.1", 9999
+h, p = ip, 9999
 server = socketserver.ThreadingTCPServer((h, p), TCPHandler)
 server.serve_forever()
