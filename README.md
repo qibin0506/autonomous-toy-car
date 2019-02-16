@@ -6,6 +6,11 @@
   2. Arduino
   3. Raspberry Pi model B+
   4. 树莓派鱼眼摄像头
+  
+### 准备工作
+  1. Raspberry Pi安装`tensorflow`（建议使用1.9版本）
+  2. Raspberry Pi安装Python版本的`opencv2`
+  3. 项目依赖`Numpy`，所以保证Raspberry Pi安装好`Numpy`
 
 ### 铺建跑道
   可从淘宝购买警示条贴在地板模拟跑道，注意：跑道不易过小，跑道宽度最好2倍于小车宽度。如图：
