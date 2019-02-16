@@ -43,6 +43,10 @@ if not trainMode:
     print("load model complete")
 
 
+def control(speed, angle):
+    ser.write(bytes("RASPI:" + str(speed) + "," + str(angle) + "\n", "utf-8"))
+
+
 class VideoProcessor(object):
     def write(self, buf):
         global angle, speed
@@ -128,7 +132,7 @@ class CtrlThread(threading.Thread):
                     continue
 
                 if speed == -10000.0:
-                    ser.write(bytes("RASPI:0.0,0.0\n", "utf-8"))
+                    control(0.0, 0.0)
                     continue
 
                 if speed < 0.0:
@@ -136,8 +140,7 @@ class CtrlThread(threading.Thread):
                 else:
                     real_speed = fixed_speed
 
-                ser.write(bytes("RASPI:" + str(real_speed) + "," + str(angle) + "\n", "utf-8"))
-                # print("RASPI:" + str(real_speed) + "," + str(angle) + "\n")
+                control(real_speed, angle)
             except Exception as e:
                 print(e)
 
