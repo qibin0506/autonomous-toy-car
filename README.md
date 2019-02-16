@@ -4,7 +4,7 @@
 ### 硬件配置
   1. 玩具车底盘
   2. Arduino
-  3. Raspberry Pi model B+
+  3. Raspberry Pi model 3B+
   4. 树莓派鱼眼摄像头
   
 ### 准备工作
