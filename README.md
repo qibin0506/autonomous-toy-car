@@ -9,7 +9,7 @@
 
 ### 铺建跑道
   可从淘宝购买警示条贴在地板模拟跑道，注意：跑道不易过小，跑道宽最好2倍于小车宽度。如图：
-  ![] (./display/1.jpeg)
+  ![](./display/1.jpeg)
   
 ### 数据采集
   1. 将socket_ctrl.py上传到Raspberry Pi
