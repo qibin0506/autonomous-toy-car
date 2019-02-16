@@ -29,8 +29,9 @@
   
  ### 数据训练
   1. 将采集到的数据下载到本地
-  2. 使用你日常训练数据的方式运行`train.py`进行数据训练
-  3. 训练结束后，将结果上传到Raspberry Pi
+  2. 运行record.py生成`data/record.csv`文件
+  3. 使用你日常训练数据的方式运行`train.py`进行数据训练
+  4. 训练结束后，将结果上传到Raspberry Pi
   
  ### 实验训练结果
   1. 修改socket_ctrl.py将`trainMode`变量改为False
